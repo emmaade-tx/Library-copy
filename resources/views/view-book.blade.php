@@ -16,7 +16,7 @@
                 </div>
                 <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ $book->url }}"> </img>
+                            <img src="{{'http://books.toscrape.com/' . $book->url }}"> </img>
                             <br>
                             <strong>{{ $book->title }}</strong>
                             <p>{{ number_format($book->price) }}</p>

@@ -14,14 +14,22 @@
                         </div>
                     @endif
                 </div>
-                <form>
-                    <label>Search</label><input type="text" name="search">
-                </form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <label>Search</label><input type="text" name="search">
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Sort in: <strong><a href='/books?order=asc'> Asc.</a></strong> Or <strong><a href="/books?order=desc">Desc.</a></strong></h5>
+                    </div>
+                </div>
+                
                 <div class="row">
                     @if(count($books) > 0)
                     @foreach($books as $book)
                         <div class="col-md-4">
-                            <img style="width: auto; height: 50%;" src="{{ $book->url }}"> </img>
+                            <img style="width: auto; height: 50%;" src="{{'http://books.toscrape.com/' . $book->url }}"> </img>
                             <br>
                             <strong>{{ $book->title }}</strong>
                             <p>{{ number_format($book->price) }}</p>

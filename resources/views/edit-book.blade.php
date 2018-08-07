@@ -18,7 +18,7 @@
                         <div class="col-md-4">
                             <form class="form-group" method="POST" action="/update/book/{{ $book->id }}">
                                 {{ csrf_field() }}
-                                <img src="{{ $book->url }}">
+                                <img src="{{'http://books.toscrape.com/' . $book->url }}">
                                 <br>
                                 <div class="form-control">
                                     <label>Title</label>
